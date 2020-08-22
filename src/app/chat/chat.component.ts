@@ -1,33 +1,35 @@
-import { Component } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { ChatService } from "../chat.service";
+import { Answer } from "../models/answer";
 
 @Component({
   selector: 'app-chat',
   templateUrl: './chat.component.html',
   styleUrls: ['./chat.component.scss']
 })
-export class ChatComponent {
+export class ChatComponent implements OnInit {
+  // contains the sent messages
+  question: string;
+  link: string;
+  page: string;
 
-  messages: any[] = [];
+  constructor(private chatService: ChatService) { }
 
-  sendMessage(event: any, userName: string, avatar: string, reply: boolean) {
-    const files = !event.files ? [] : event.files.map((file) => {
-      return {
-        url: file.src,
-        type: file.type,
-        icon: 'file-text-outline',
-      };
-    });
+  ngOnInit() {
+  }
 
-    this.messages.push({
-      text: event.message,
-      date: new Date(),
-      reply: reply,
-      type: files.length ? 'file' : 'text',
-      files: files,
-      user: {
-        name: userName,
-        avatar: avatar,
-      },
-    });
+  onSendMessage(message: string) {
+    this.question = message;
+    console.log(message);
+
+    //this.link = "http";
+    //this.page = "50";
+
+    this.chatService.getAnswer(this.question)
+      .subscribe(data => {
+        console.log(data);
+        this.link = data.body.link;
+        this.page = data.body.page.toString();
+    }, error => {console.log("There was as error: " + error)})
   }
 }

@@ -1,0 +1,10 @@
+{
+  "/api/*": {
+    "target": "https://discussai.herokuapp.com/api/ask/",
+    "secure": true,
+    "changeOrigin": true,
+    "pathRewrite": {
+      "^/api": ""
+    }
+  }
+}

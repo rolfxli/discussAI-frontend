@@ -1,15 +1,20 @@
-<nb-chat title="Jake" size="medium" status="warning">
-    <nb-chat-message *ngFor="let message of messages"
-                     [type]="message.type"
-                     [message]="message.text"
-                     [reply]="message.reply"
-                     [sender]="message.user.name"
-                     [date]="message.date"
-                     [files]="message.files"
-                     [quote]="message.quote"
-                     [latitude]="message.latitude"
-                     [longitude]="message.longitude"
-                     [avatar]="message.user.avatar"></nb-chat-message>
-    <nb-chat-form (send)="sendMessage($event, 'Jake', 'http://www.reactiongifs.com/r/wnd1.gif', true)" [showButton]="false" [dropFiles]="true">
-    </nb-chat-form>
-  </nb-chat>
+
+    <div class="chat-box">
+      <div class="main">
+        <div class="input-container">
+          <input
+            placeholder="Ask a question!"
+            #messageInput
+            (keydown.enter)="
+              onSendMessage(messageInput.value); messageInput.value = ''
+            "
+          />
+        </div>
+        <div><hr class="home-separator"></div>
+        
+        <div class="answer">
+            <p>Question: {{question}}</p>
+            <p>Image: {{link}}</p>
+            <p>Page: {{page}}</p>
+        </div>
+      </div>
