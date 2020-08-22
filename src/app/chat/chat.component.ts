@@ -10,8 +10,8 @@ import { Answer } from "../models/answer";
 export class ChatComponent implements OnInit {
   // contains the sent messages
   question: string;
-  link: string;
-  page: string;
+  link: string = null;
+  page: number = null;
 
   constructor(private chatService: ChatService) { }
 
@@ -22,14 +22,11 @@ export class ChatComponent implements OnInit {
     this.question = message;
     console.log(message);
 
-    //this.link = "http";
-    //this.page = "50";
-
     this.chatService.getAnswer(this.question)
       .subscribe(data => {
         console.log(data);
-        this.link = data.body.link;
-        this.page = data.body.page.toString();
-    }, error => {console.log("There was as error: " + error)})
+        this.link = data[0].link;
+        this.page = data[0].page;
+    }, error => {console.log("There was an error: " + error)})
   }
 }
