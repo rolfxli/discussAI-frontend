@@ -9,6 +9,7 @@ import { HomeComponent } from './home/home.component';
 import { StreamComponent } from './stream/stream.component';
 import { ButtonComponent } from './button/button.component';
 import { MainComponent } from './main/main.component';
+import { StreamVideoComponent } from './stream-video/stream-video.component';
 
 
 const agoraConfig: AgoraConfig = {
@@ -21,12 +22,13 @@ const agoraConfig: AgoraConfig = {
     HomeComponent,
     StreamComponent,
     ButtonComponent,
-    MainComponent
+    MainComponent,
+    StreamVideoComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgxAgoraModule.forRoot(agoraConfig)
+    NgxAgoraModule.forRoot(agoraConfig),
   ],
   providers: [],
   bootstrap: [AppComponent]
