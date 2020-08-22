@@ -1,0 +1,34 @@
+@import '../../assets/utils';
+
+.button{
+  @include uTransition(all);
+  padding: 0;
+  background: transparent;
+  border-radius: 5px;
+  /*
+  padding-top: 0.3rem;
+  padding-bottom: 0.3rem;
+   */
+  a{
+    padding-bottom: calc(0.375em - 1px);
+    font-size: 1rem;
+    text-decoration: none;
+    //padding-bottom: 0.75em;
+    padding-left: 0.75em;
+    padding-right: 0.75em;
+    padding-top: calc(0.375em - 1px);
+    //padding-top: 0.75em;
+    color: #fefefe;
+  }
+  /*
+  &.is-outlined.is-inverted:hover a{
+    color: black;
+  }
+   */
+  &.is-outlined:hover a{
+    color: black;
+  }
+  &.is-inverted:hover {
+    background:  #fefefe;
+  }
+}

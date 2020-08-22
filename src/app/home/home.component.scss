@@ -1,0 +1,11 @@
+@import '../../assets/utils';
+
+#component-home {
+    background-image: url('../../assets/images/ht6 background.png');
+    background-size: cover;
+    background-position: left top;
+    height: 100vh;
+    position: relative;
+    @include flex-center;
+    overflow: hidden;
+  }

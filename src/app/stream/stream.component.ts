@@ -2,13 +2,12 @@ import { Component, OnInit } from '@angular/core';
 import { NgxAgoraService, Stream, AgoraClient, ClientEvent, StreamEvent } from 'ngx-agora';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  selector: 'app-stream',
+  templateUrl: './stream.component.html',
+  styleUrls: ['./stream.component.scss']
 })
-export class AppComponent { // implements OnInit
-  title = 'ht6';
-  /*
+export class StreamComponent implements OnInit {
+  title = 'angular-video';
   localCallId = 'agora_local';
   remoteCalls: string[] = [];
 
@@ -33,20 +32,17 @@ export class AppComponent { // implements OnInit
   /**
    * Attempts to connect to an online chat room where users can host and receive A/V streams.
    */
-  /*
   join(onSuccess?: (uid: number | string) => void, onFailure?: (error: Error) => void): void {
     this.client.join(null, 'foo-bar', this.uid, onSuccess, onFailure);
-  } */
+  }
   
   /**
    * Attempts to upload the created local A/V stream to a joined chat room.
    */
-  /*
   publish(): void {
     this.client.publish(this.localStream, err => console.log('Publish local stream error: ' + err));
-  } */
+  }
   
-  /*
   private assignLocalStreamHandlers(): void {
     this.localStream.on(StreamEvent.MediaAccessAllowed, () => {
       console.log('accessAllowed');
@@ -125,5 +121,4 @@ export class AppComponent { // implements OnInit
   private getRemoteId(stream: Stream): string {
     return `agora_remote-${stream.getId()}`;
   }
-  */
 }
