@@ -1,4 +1,8 @@
 <div [id]="localCallId" class="local"></div>
 
 <div *ngFor="let callId of remoteCalls" [id]="callId" class="remote"></div>
+<div class="top-header">
+    <app-button link="/home" text="Home" class="swap-stream" theme="is-primary"></app-button>
+    <app-button link="/stream" text="Swap" class="swap-stream" theme="is-primary"></app-button>
+</div>
 <app-chat></app-chat>
