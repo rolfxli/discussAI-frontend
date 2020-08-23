@@ -45,25 +45,25 @@ export class ChatComponent implements OnInit {
     this.question = split.join(' ');
     console.log(msg);
 
-    if (msg == "!ask absolute aalue") {
+    if (msg == "!ask absolute value") {
       //this.question = "Absolute Value";
-      this.link = "";
+      this.link = "https://discussai.blob.core.windows.net/media/abs.png";
       this.page = 1;
-    } else if(msg == "!ask triangle inequality") {
+    } else if(msg == "!ask triangle inequality") { // broken
       //this.question = "Triangle Inequality";
-      this.link = "";
+      this.link = "https://discussai.blob.core.windows.net/media/tri1.png";
       this.page = 3;
-    } else if(msg == "!ask subsequence") {
+    } else if(msg == "!ask subsequence") { // broken
       //this.question = "Subsequence";
-      this.link = "";
+      this.link = "https://discussai.blob.core.windows.net/media/tri2.png";
       this.page = 17;
     } else if(msg == "!ask tail of a sequence") {
       //this.question = "Tail of a Sequence";
-      this.link = "";
+      this.link = "https://discussai.blob.core.windows.net/media/tri2.png";
       this.page = 18;
     } else if(msg == "!ask uniqueness of limits for sequences") {
       //this.question = "Uniqueness of Limits for Sequences";
-      this.link = "";
+      this.link = "https://discussai.blob.core.windows.net/media/sub2.png";
       this.page = 27;
     } else {
       this.question = "No Answer Found";
