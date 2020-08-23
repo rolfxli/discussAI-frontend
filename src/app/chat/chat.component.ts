@@ -23,15 +23,16 @@ export class ChatComponent implements OnInit {
     var msg = message.toLowerCase();
     var split = msg.split(' ');
     split.shift();
+    var quest = split.join('_');
     this.question = split.join(' ');
     console.log(msg);
 
-    this.chatService.getAnswer(this.question)
+    this.chatService.getAnswer(quest)
       .subscribe(data => {
         console.log(data);
-        this.link = data[0].link;
-        this.page = data[0].page;
-        if (this.link == "") {
+        this.link = data.link;
+        this.page = data.page;
+        if (this.link == " ") {
           this.page = 0;
           this.question = "No Answer Found"
         }
