@@ -51,11 +51,11 @@ export class ChatComponent implements OnInit {
       this.page = 1;
     } else if(msg == "!ask triangle inequality") { // broken
       //this.question = "Triangle Inequality";
-      this.link = "https://discussai.blob.core.windows.net/media/tri1.png";
+      this.link = "https://discussai.blob.core.windows.net/media/tri1.PNG";
       this.page = 3;
     } else if(msg == "!ask subsequence") { // broken
       //this.question = "Subsequence";
-      this.link = "https://discussai.blob.core.windows.net/media/tri2.png";
+      this.link = "https://discussai.blob.core.windows.net/media/sub1.png";
       this.page = 17;
     } else if(msg == "!ask tail of a sequence") {
       //this.question = "Tail of a Sequence";
