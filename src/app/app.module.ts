@@ -33,7 +33,7 @@ const agoraConfig: AgoraConfig = {
     AppRoutingModule,
     NgxAgoraModule.forRoot(agoraConfig),
     BrowserAnimationsModule,
-    HttpClientModule
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
