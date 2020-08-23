@@ -6,10 +6,12 @@
         placeholder=" Ask a question!"
         #messageInput
         (keydown.enter)="
-          onSendMessage(messageInput.value); messageInput.value = ''
+          getSample(messageInput.value); messageInput.value = '' 
         "
-      />
-      <button class="button" type="submit">Submit</button>
+      /> <!--onSendMessage(messageInput.value);-->
+      <button class="button" type="submit" (click)="
+      getSample(messageInput.value); messageInput.value = '' 
+    ">Submit</button>
     </div>
     <div><hr class="black-separator"></div>
     
