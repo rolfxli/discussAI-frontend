@@ -1,6 +1,11 @@
 @import '../../assets/utils'; 
-  
+.big-box {
+  left: 1500px;
+  top: 120px;
+} 
+
   .chat-box {
+    left: 1500px;
     top: 120px;
     position: fixed;
     min-width: 20%;
@@ -14,7 +19,7 @@
     border: 5px solid;
     border-color: black;
     z-index: 1;
-    font-family: sans-serif;
+    font-family: Helvetica;
     overflow-wrap: break-word;
   }
 
@@ -57,4 +62,15 @@
   background: #B2ECFB;
   height: 33px;
   border-radius: 0px 10px 10px 0px;
+}
+
+.move-button {
+  position: absolute;
+  right: 2em;
+  top: 3em;
+}
+
+.meme {
+  padding-left: 0.75em !important;
+  margin-left: 0.75em !important;
 }

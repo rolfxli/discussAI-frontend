@@ -4,7 +4,7 @@ import { NgxAgoraService, Stream, AgoraClient, ClientEvent, StreamEvent } from '
 @Component({
   selector: 'app-stream',
   templateUrl: './stream.component.html',
-  styleUrls: ['./stream.component.scss']
+  styleUrls: ['./stream.component.scss', ]
 })
 export class StreamComponent implements OnInit {
   title = 'angular-video';

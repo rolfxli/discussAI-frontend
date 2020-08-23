@@ -1,33 +1,34 @@
-<div>
-  <button (click)="toggle()" id="bt">
+<div class="big-box">
+  <div class="move-button">
+  <app-button text="Hide/Show" class="meme" theme="is-primary" (click)="toggle()" id="bt">
     {{buttonName}}
-  </button>
-
-<ng-container *ngIf="show">
-  <div class="chat-box">
-    <div class="main">
-      <div class="input-container">
-        <input
-          placeholder=" Ask a question!"
-          #messageInput
-          (keydown.enter)="
-            onSendMessage(messageInput.value); messageInput.value = ''
-          "
-        />
-        <button class="button" type="submit">Submit</button>
-      </div>
-      <div><hr class="black-separator"></div>
-      
-      <div class="answer">
-          <p>Question: {{question}}</p>
-          <br>
-          <p>Image: {{link}}</p>
-          <br>
-          <p>Page: {{page}}</p>
-          <br>
+  </app-button>
+</div>
+  <ng-container *ngIf="show">
+    <div class="chat-box">
+      <div class="main">
+        <div class="input-container">
+          <input
+            placeholder=" Ask a question!"
+            #messageInput
+            (keydown.enter)="
+              onSendMessage(messageInput.value); messageInput.value = ''
+            "
+          />
+          <button class="button" type="submit">Submit</button>
+        </div>
+        <div><hr class="black-separator"></div>
+        
+        <div class="answer">
+            <p>Question: {{question}}</p>
+            <br>
+            <p>Image: {{link}}</p>
+            <br>
+            <p>Page: {{page}}</p>
+            <br>
+        </div>
       </div>
     </div>
-  </div>
-</ng-container>
+  </ng-container>
 
 </div>
