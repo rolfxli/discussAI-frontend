@@ -1,0 +1,59 @@
+@import '../../assets/utils'; 
+  
+  .chat-box {
+    position: fixed;
+    min-width: 20%;
+    max-width: 400px;
+    width: auto;
+    height: auto;
+    background-color: #72DDF7;
+    border-radius: 10px;
+    display: flex;
+    align-items: stretch;
+    border: 5px solid;
+    border-color: black;
+    z-index: 1;
+    font-family: sans-serif;
+    overflow-wrap: break-word;
+  }
+
+  p {
+      padding-left: 1rem;
+  }
+  input {
+    outline:none;
+   }
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    align-self: left;
+    height: 100%;
+    width: 100%;
+  }
+  
+  .input-container {
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-top: 1em;
+    display: flex;
+    
+  
+    input {
+      background: #f1f1f1;
+      border-radius: 10px 0px 0px 10px;
+      height: 45px;
+      width: 100%;
+      flex: 1;
+      border: none;
+      font-size: 15px;
+    }
+  }
+  
+.button {
+  border: #B2ECFB;
+  background: #B2ECFB;
+  height: 33px;
+  border-radius: 0px 10px 10px 0px;
+}

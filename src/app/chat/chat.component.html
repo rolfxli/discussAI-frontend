@@ -1,0 +1,25 @@
+
+<div class="chat-box">
+  <div class="main">
+    <div class="input-container">
+      <input
+        placeholder=" Ask a question!"
+        #messageInput
+        (keydown.enter)="
+          onSendMessage(messageInput.value); messageInput.value = ''
+        "
+      />
+      <button class="button" type="submit">Submit</button>
+    </div>
+    <div><hr class="black-separator"></div>
+    
+    <div class="answer">
+        <p>Question: {{question}}</p>
+        <br>
+        <p>Image: {{link}}</p>
+        <br>
+        <p>Page: {{page}}</p>
+        <br>
+    </div>
+  </div>
+</div>
