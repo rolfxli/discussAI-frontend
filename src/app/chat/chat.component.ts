@@ -12,6 +12,8 @@ export class ChatComponent implements OnInit {
   question: string;
   link: string = null;
   page: number = null;
+  show: boolean = false;
+  buttonName: any = 'Show';
 
   constructor(private chatService: ChatService) { }
 
@@ -28,5 +30,15 @@ export class ChatComponent implements OnInit {
         this.link = data[0].link;
         this.page = data[0].page;
     }, error => {console.log("There was an error: " + error)})
+  }
+
+  toggle() {
+    this.show = !this.show;
+
+    // CHANGE THE NAME OF THE BUTTON.
+    if(this.show)  
+      this.buttonName = "Hide";
+    else
+      this.buttonName = "Show";
   }
 }
