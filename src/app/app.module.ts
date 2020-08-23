@@ -26,7 +26,7 @@ const agoraConfig: AgoraConfig = {
     ButtonComponent,
     MainComponent,
     StreamVideoComponent,
-    ChatComponent,
+    ChatComponent
   ],
   imports: [
     BrowserModule,
